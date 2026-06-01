@@ -1,0 +1,370 @@
+
+:root {
+
+    --green: #7abf88;
+    --green-dark: #4d8a61;
+    --beige: #fff5e8;
+    --yellow: #ffd66b;
+    --blue: #b8ebf2;
+    --pink: #ffd8e8;
+    --white: #ffffff;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Poppins', sans-serif;
+    background:var(--blue);
+    color:#444;
+    overflow-x:hidden;
+    position:relative;
+}
+
+#confettiCanvas{
+    position:fixed;
+    inset:0;
+    width:100%;
+    height:100%;
+    z-index:-1;
+    pointer-events:none;
+}
+
+.container{
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+}
+
+.hero{
+
+    min-height:100vh;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    text-align:center;
+
+    padding:40px;
+
+    background:
+    linear-gradient(
+    rgba(255,255,255,.75),
+    rgba(255,255,255,.75)
+    );
+     background-image: url("hero2.png");
+    background-size: cover;
+    
+    background-repeat: no-repeat;
+    
+}
+
+/**INICI9O  DE LETRAS DEL HERO */
+
+.hero h1{
+    font-size: clamp(1.5rem, 3vw, 2.5rem);
+    color: #5b7c5a;
+    margin-bottom: 15px;
+    font-family: 'Fredoka', cursive;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-shadow: 2px 2px 10px rgba(255,255,255,.8);
+}
+
+.baby-name{
+    font-size: clamp(4rem, 10vw, 7rem);
+    font-family: 'Fredoka', cursive;
+    font-weight: 700;
+    color: #4d8a61;
+    line-height: 1;
+
+    /* efecto degradado */
+    background: linear-gradient(
+        180deg,
+        #8ecf9c,
+        #4d8a61
+    );
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    margin-bottom: 25px;
+
+    /* sombra elegante */
+    text-shadow:
+        0px 4px 15px rgba(0,0,0,.08);
+
+    /* animación suave */
+    animation: floatText 3s ease-in-out infinite;
+}
+
+
+@keyframes floatText {
+
+    0%{
+        transform: translateY(0);
+    }
+
+    50%{
+        transform: translateY(-8px);
+    }
+
+    100%{
+        transform: translateY(0);
+    }
+
+}
+/**FINAL DE LETRAS DEL HERO */
+
+.parents{
+    font-size:1.2rem;
+}
+
+.parents span{
+    display:block;
+    font-size:2rem;
+    color:#ff8fb3;
+    margin-top:10px;
+}
+
+.section{
+    padding:80px 20px;
+    text-align:center;
+}
+
+.section h2{
+    margin-bottom:35px;
+    color:var(--green-dark);
+    font-size:2rem;
+    font-family:'Fredoka', sans-serif;
+}
+
+.gallery{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+}
+
+.photo-card img,
+.venue-photo img{
+    width:100%;
+    border-radius:20px;
+    display:block;
+    box-shadow:0 10px 25px rgba(0,0,0,.15);
+}
+
+ /* ===== FRASE ===== */
+
+.frase{
+   max-width: 900px;
+    margin: auto;
+    font-size: 35px;
+    line-height: 1.8;
+    text-align: center;
+    letter-spacing: 1px;
+    font-family: 'Great Vibes', cursive;
+    color: #4d8a61;
+    
+    /* Mejoramos la sombra del texto para que resalte sobre el fondo de acuarela */
+    text-shadow: 
+        -1px -1px 0 #fff,  
+         1px -1px 0 #fff,
+        -1px  1px 0 #fff,
+         1px  1px 0 #fff,
+         0 0 15px rgba(255,255,255,0.8);
+
+    /* --- CONFIGURACIÓN DE LA IMAGEN DE FONDO --- */
+    background-image: url(TEX.png);
+    background-position: center center; /* Centra la imagen para usar el espacio limpio */
+    background-repeat: no-repeat;       /* Evita que los dinosaurios se dupliquen */
+    background-size: cover;             /* Cubre toda la tarjeta adaptándose al tamaño */
+    /* ------------------------------------------- */
+
+    /* Aumentamos el padding vertical para dar espacio a los dinosaurios de arriba/abajo */
+    padding: 80px 45px; 
+    border-radius: 30px;
+
+    /* Un fondo blanco muy translúcido ayuda a que el efecto Blur funcione y no opaque tu imagen */
+    background-color: rgba(255, 255, 255, 0.15); 
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px); /* Soporte para Safari */
+
+    border: 1px solid rgba(255, 255, 255, 0.4);
+
+    /* Suavizamos la sombra exterior para que combine con los tonos pastel */
+    box-shadow:
+        0 8px 32px rgba(180, 210, 190, 0.2), 
+        0 0 25px rgba(255, 255, 255, 0.3);
+
+    position: relative;
+    overflow: hidden;
+
+    animation: floatCard 5s ease-in-out infinite;
+}
+
+/* ===== UBICACIONES ===== */
+.locations{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+    gap:40px;
+}
+
+.card{
+    background:rgba(255,255,255,.7);
+    padding:20px;
+    border-radius:25px;
+    backdrop-filter:blur(6px);
+}
+
+.card img{
+    width:100%;
+    height:250px;
+    object-fit:cover;
+    border-radius:20px;
+}
+
+
+
+
+
+
+
+
+.btn{
+    display:inline-block;
+    margin-top:15px;
+    padding:14px 28px;
+    border-radius:50px;
+    background:var(--green);
+    color:white;
+    text-decoration:none;
+    font-weight:600;
+    transition:.3s;
+}
+
+.btn:hover{
+    transform:translateY(-3px);
+}
+
+.whatsapp{
+    background:#25D366;
+}
+
+.gift-card{
+    max-width:800px;
+    margin:auto;
+    background:white;
+    padding:35px;
+    border-radius:20px;
+    box-shadow:0 10px 25px rgba(0,0,0,.1);
+}
+
+.gift-links{
+    margin-top:25px;
+}
+
+.gift-links a{
+    display:inline-block;
+    margin:10px;
+    text-decoration:none;
+    background:var(--yellow);
+    color:#333;
+    padding:10px 20px;
+    border-radius:30px;
+}
+
+.confirm-text{
+    max-width:700px;
+    margin:auto;
+    margin-bottom:30px;
+}
+
+.countdown{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    flex-wrap:wrap;
+}
+
+.time-box{
+    width:130px;
+    padding:25px;
+    background:white;
+    border-radius:20px;
+    box-shadow:0 10px 20px rgba(0,0,0,.1);
+}
+
+.time-box span{
+    display:block;
+    font-size:2.5rem;
+    font-weight:bold;
+    color:var(--green-dark);
+}
+
+footer{
+    text-align:center;
+    padding:40px;
+    background:#f7ead7;
+}
+
+@media(max-width:768px){
+
+    .location-card{
+        grid-template-columns:1fr;
+    }
+
+    .time-box{
+        width:120px;
+    }
+
+}
+
+
+/* =====================================
+   EFECTO DE BURBUJAS (BABY SHOWER)
+   ===================================== */
+
+.burbuja-baby {
+    position: absolute;
+    bottom: -100px; /* Empiezan abajo de la pantalla */
+    background: rgba(255, 255, 255, 0.4); /* Color blanco tierno con transparencia */
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    border-radius: 50%;
+    box-shadow: inset 0 0 8px rgba(255, 255, 255, 0.6), 
+                0 0 12px rgba(255, 255, 255, 0.3);
+    animation: flotarBurbuja linear infinite;
+}
+
+/* El pequeño brillo blanco para que parezcan burbujas reales */
+.burbuja-baby::after {
+    content: '';
+    position: absolute;
+    top: 15%;
+    left: 15%;
+    width: 20%;
+    height: 20%;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 50%;
+}
+
+/* Animación: suben y se mecen suavemente */
+@keyframes flotarBurbuja {
+    0% {
+        transform: translateY(0) translateX(0);
+        opacity: 0;
+    }
+    10% {
+        opacity: 1;
+    }
+    90% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-120vh) translateX(40px);
+        opacity: 0;
+    }
+}
