@@ -31,14 +31,16 @@ body{
 
 .hero{
 
+
     min-height:100vh;
 
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: 30px 20px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    text-align:center;
+
+    padding:40px;
 
     background:
     linear-gradient(
@@ -48,9 +50,9 @@ body{
      background-image: url("hero2.png");
     
   background-size: cover;
-    background-position: 65% center; /* Mueve el centro un poco a la derecha en móvil para captar más personajes */
+    background-position:   9% center; /* Mueve el centro un poco a la derecha en móvil para captar más personajes */
     background-repeat: no-repeat;
-    background-attachment: scroll;
+  
 }
 
 /* --- EL NUEVO CUADRO PARA PROTEGER EL TEXTO --- */
@@ -59,7 +61,7 @@ body{
     backdrop-filter: blur(8px);                  /* Difumina los dinosaurios del fondo para que no estorben al leer */
     -webkit-backdrop-filter: blur(8px);         /* Soporte para navegadores Safari */
     
-    padding: 30px 40px;                          /* Espacio interno para que el texto respire */
+    padding: 5px 30px;                          /* Espacio interno para que el texto respire */
     border-radius: 20px;                         /* Esquinas redondeadas y suaves */
     border: 1px solid rgba(255, 255, 255, 0.5);  /* Un borde brillante muy fino y elegante */
     
@@ -192,7 +194,7 @@ body{
 
     /* --- CONFIGURACIÓN DE LA IMAGEN DE FONDO --- */
     background-image: url(TEX.png);
-    background-position: center center; /* Centra la imagen para usar el espacio limpio */
+    background-position: 65% center; /* Centra la imagen para usar el espacio limpio */
     background-repeat: no-repeat;       /* Evita que los dinosaurios se dupliquen */
     background-size: cover;             /* Cubre toda la tarjeta adaptándose al tamaño */
     /* ------------------------------------------- */
