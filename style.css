@@ -33,13 +33,12 @@ body{
 
     min-height:100vh;
 
-    display:flex;
-    align-items:center;
-    justify-content:center;
-
-    text-align:center;
-
-    padding:40px;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 30px 20px;
 
     background:
     linear-gradient(
@@ -47,10 +46,11 @@ body{
     rgba(255,255,255,.75)
     );
      background-image: url("hero2.png");
-    background-size: cover;
     
+  background-size: cover;
+    background-position: 65% center; /* Mueve el centro un poco a la derecha en móvil para captar más personajes */
     background-repeat: no-repeat;
-    
+    background-attachment: scroll;
 }
 
 /* --- EL NUEVO CUADRO PARA PROTEGER EL TEXTO --- */
