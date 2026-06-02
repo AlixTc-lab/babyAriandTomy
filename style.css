@@ -162,6 +162,8 @@ body{
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
     gap:25px;
+     
+
 }
 
 .photo-card img,
@@ -170,7 +172,30 @@ body{
     border-radius:20px;
     display:block;
     box-shadow:0 10px 25px rgba(0,0,0,.15);
+     transition:
+        transform .5s ease,
+        box-shadow .5s ease,
+        filter .5s ease;
+
+    cursor:pointer;
+
 }
+
+
+.gallery img:hover{
+    transform:
+        scale(1.06)
+        translateY(-8px);
+
+    box-shadow:
+        0 20px 40px rgba(0,0,0,.18),
+        0 0 30px rgba(216,180,106,.35);
+
+    filter:brightness(1.05);
+    
+}
+
+
 
  /* ===== FRASE ===== */
 
@@ -221,6 +246,18 @@ body{
     animation: floatCard 5s ease-in-out infinite;
 }
 
+@keyframes floatCard{
+    0%{
+        transform:translateY(0px);
+    }
+    50%{
+        transform:translateY(-8px);
+    }
+    100%{
+        transform:translateY(0px);
+    }
+}
+
 /* ===== UBICACIONES ===== */
 .locations{
     display:grid;
@@ -233,6 +270,11 @@ body{
     padding:20px;
     border-radius:25px;
     backdrop-filter:blur(6px);
+    
+    background-image: url(hero.png);
+    background-position: center center; /* Centra la imagen para usar el espacio limpio */
+    background-repeat: no-repeat;       /* Evita que los dinosaurios se dupliquen */
+    background-size: cover;
 }
 
 .card img{
@@ -270,27 +312,52 @@ body{
 }
 
 .gift-card{
-    max-width:800px;
-    margin:auto;
-    background:white;
-    padding:35px;
-    border-radius:20px;
-    box-shadow:0 10px 25px rgba(0,0,0,.1);
+     background:rgba(255,255,255,.7);
+    padding:20px;
+    border-radius:25px;
+    backdrop-filter:blur(6px);
+
+    background-image: url(hero.png);
+    background-position: center center; /* Centra la imagen para usar el espacio limpio */
+    background-repeat: no-repeat;       /* Evita que los dinosaurios se dupliquen */
+    background-size: cover;
 }
 
-.gift-links{
-    margin-top:25px;
+/* prueba */
+.lista-bonita {
+    max-width: 400px;
+    margin: auto;
+    padding: 0;
+    list-style: none;
 }
 
-.gift-links a{
-    display:inline-block;
-    margin:10px;
-    text-decoration:none;
-    background:var(--yellow);
-    color:#333;
-    padding:10px 20px;
-    border-radius:30px;
+.lista-bonita li {
+    background: white;
+    margin-bottom: 12px;
+    padding: 15px 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,.08);
+    transition: all 0.3s ease;
+    position: relative;
+    padding-left: 50px;
 }
+
+.lista-bonita li::before {
+    content: "✓";
+    position: absolute;
+    left: 18px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #4f46e5;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.lista-bonita li:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0,0,0,.12);
+}
+/*fin prueba */
 
 .confirm-text{
     max-width:700px;
@@ -303,14 +370,38 @@ body{
     justify-content:center;
     gap:20px;
     flex-wrap:wrap;
+
+text-align:center;
+    margin:80px auto;
+    padding:40px;
+
+    background-image: url(dino.png);
+
+    backdrop-filter:blur(12px);
+
+    border-radius:30px;
+
+    max-width:900px;
+
+    box-shadow:
+        0 10px 30px rgba(0,0,0,.12),
+        0 0 20px rgba(216,180,106,.18);
+
+
 }
 
 .time-box{
-    width:130px;
+      background:rgba(255,255,255,.45);
+
     padding:25px;
-    background:white;
-    border-radius:20px;
-    box-shadow:0 10px 20px rgba(0,0,0,.1);
+
+    border-radius:25px;
+
+    min-width:130px;
+
+    box-shadow:0 8px 20px rgba(0,0,0,.10);
+
+    animation:floatCard 4s ease-in-out infinite;
 }
 
 .time-box span{
