@@ -192,7 +192,7 @@ body{
 
     /* --- CONFIGURACIÓN DE LA IMAGEN DE FONDO --- */
     background-image: url(TEX.png);
-    background-position: center center; /* Centra la imagen para usar el espacio limpio */
+    background-position: 65% center; /* Centra la imagen para usar el espacio limpio */
     background-repeat: no-repeat;       /* Evita que los dinosaurios se dupliquen */
     background-size: cover;             /* Cubre toda la tarjeta adaptándose al tamaño */
     /* ------------------------------------------- */
